@@ -172,7 +172,7 @@ export default function Home() {
       </ServiceDescription>
     </ServiceItem>
     <ServiceItem>
-      <ServiceImage src="/masajes-relajantes.jpg" alt="Masajes" />
+      <ServiceImage src="/Masajes-relajantes.jpg" alt="Masajes" />
       <ServiceDescription>
         <h3>Masajes</h3>
         <p>Ofrecemos relajantes, descontracturantes, linfáticos, para piernas cansadas y con piedras calientes.</p>
@@ -207,7 +207,7 @@ export default function Home() {
       </ServiceDescription>
     </ServiceItem>
     <ServiceItem>
-      <ServiceImage src="/masajes-reductores.jpg" alt="Especialistas en Masajes Postoperatorios" />
+      <ServiceImage src="/Masajes-reductores.jpg" alt="Especialistas en Masajes Postoperatorios" />
       <ServiceDescription>
         <h3>Especialistas en Masajes Postoperatorios</h3>
         <p>Beneficios.</p>

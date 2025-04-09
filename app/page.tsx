@@ -3,6 +3,10 @@
 
 
 import styled from 'styled-components';
+import { EmblaOptionsType } from 'embla-carousel';
+import EmblaCarousel from './carousel/EmblaCarousel';
+import Image from 'next/image'
+
 //import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 
 const Container = styled.div`
@@ -85,95 +89,15 @@ position: relative;
 	}
 `;
 
-// const Logo = styled.h1`
-//   font-size: 4em;
-//   font-weight: 800;
-//   color: #fff;
-//   text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   z-index: 10;
-// `;
-
-// const SectionTitle = styled.h2`
-//   font-size: 2.5em;
-//   color: #3498db;
-//   margin-bottom: 20px;
-//   text-align: center;
-// `;
-
-// const SectionContent = styled.div`
-//   background: rgba(255, 255, 255, 0.8);
-//   padding: 40px;
-//   border-radius: 10px;
-//   max-width: 800px;
-//   margin: 0 auto;
-//   color: #333;
-// `;
-
-// const Button = styled.button`
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   background-color: #e74c3c;
-//   border: none;
-//   color: white;
-//   padding: 15px 32px;
-//   text-align: center;
-//   text-decoration: none;
-//   display: inline-block;
-//   font-size: 1em;
-//   margin: 20px 2px;
-//   cursor: pointer;
-//   border-radius: 5px;
-//   transition: all 0.3s;
-//   &:hover {
-//     background-color: #c0392b;
-//     transform: scale(1.05);
-//   }
-// `;
-// const ServiceItem = styled.div`
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   margin: 20px 0;
-//   background: rgba(255, 255, 255, 0.9);
-//   border-radius: 10px;
-//   padding: 20px;
-//   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-//   transition: transform 0.3s;
-//   &:hover {
-//     transform: scale(1.02);
-//   }
-// `;
-
-// const ServiceImage = styled.img`
-//   width: 100px;
-//   height: 100px;
-//   object-fit: cover;
-//   border-radius: 5px;
-//   margin-right: 20px;
-// `;
-
-// const ServiceDescription = styled.div`
-//   flex: 1;
-// `;
-
-// const ContenedorImagenes = styled.div`
- 
-//   display: block;
-//   width: 100%;
-//   height: 100vh;
-//   background-size: cover;
-//   z-index: -99;
-// `;
 
 export default function Home() {
   // const handleReservaClick = () => {
   //   window.open('https://wa.me/525568671684', '_blank');
   // };
+
+  const OPTIONS: EmblaOptionsType = { direction: 'rtl' }
+  const SLIDE_COUNT = 5
+  const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
   return (
     <Container>
@@ -192,6 +116,16 @@ export default function Home() {
           <AnimatedButton>Reserva tu cita</AnimatedButton>
         </VideoContent>
       </VideoContainer>
+
+      <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+
+      <div className="card" >
+                          <Image src="./celulitis.jpg" alt="Avatar of John Doe" width={100} height={150} />
+                          <div className="container">
+                              <h4><b>John Doe</b></h4>
+                              <p>Architect & Engineer</p>
+                          </div>
+                      </div>
 
       {/* <VideoContainer>
         <video autoPlay muted loop>

@@ -103,7 +103,7 @@ export default function Home() {
     <Container>
       <Parallax pages={4} style={{ top: '0', left: '0' }}>
         {/* Capa de fondo con la imagen del spa */}
-        <ContenedorImagenes style={{ backgroundImage: "url('/vista.divine.jpg')" }}>&nbsp;</ContenedorImagenes>
+        <ContenedorImagenes style={{ backgroundImage: "url('/vistadivine.png')" }}>&nbsp;</ContenedorImagenes>
         <ContenedorImagenes style={{ backgroundImage: "url('/Diseño sin título.png')", zIndex: -99  }}>&nbsp;</ContenedorImagenes>
         <ContenedorImagenes style={{ backgroundImage: "url('/vista.divine3.png')", zIndex: -99 }}>&nbsp;</ContenedorImagenes>
         <ContenedorImagenes style={{ backgroundImage: "url('/vista.divine3.png')", zIndex: -99 }}>&nbsp;</ContenedorImagenes>
@@ -115,7 +115,7 @@ export default function Home() {
         </ParallaxLayer>
 
         {/* Sección de Bienvenida */}
-        <ParallaxLayer offset={0.6} speed={0.3}>
+        <ParallaxLayer offset={0.55} speed={0.3}>
           <SectionContent>
             <SectionTitle>Bienvenido</SectionTitle>
             <p>En DivineClinic&Spa, <strong> nos dedicamos a proporcionar un oasis de relajación y bienestar en el corazón de la Ciudad de México...</strong></p>
@@ -124,14 +124,14 @@ export default function Home() {
         </ParallaxLayer>
 
         {/* Sección Acerca de nosotros */}
-        <ParallaxLayer offset={1} speed={0.5}>
+        <ParallaxLayer offset={0.99999} speed={0.5}>
   <SectionContent style={{ marginBottom: '100px' }}>
     <SectionTitle>Nuestros servicios</SectionTitle>
     <ServiceItem>
       <ServiceImage src="/depilacionlaser.jpg" alt="Depilación Láser Tridiodo" />
       <ServiceDescription>
         <h3>Depilación Láser Tridiodo</h3>
-        <p>Tratamiento avanzado para una depilación permanente y efectiva.</p>
+        <p>Tratamiento avanzado para una depilación permanente y efectiva.Elimina el bello desde la raíz</p>
       </ServiceDescription>
     </ServiceItem>
     <ServiceItem>
@@ -159,7 +159,9 @@ export default function Home() {
       <ServiceImage src="/faciales.jpg" alt="Tratamientos Faciales" />
       <ServiceDescription>
         <h3>Tratamientos Faciales</h3>
-        <p>Cuidado integral de la piel facial para rejuvenecimiento y limpieza profunda.</p>
+        <p>Tratamientos no invasivos que ayudan a mantener la piel sana, tersa y luminosa con diversidad de faciales como anti-edad nos ayuda a aumentar la producción de colágeno,
+          humecta, tonifica, rejuvenece y elimina las lineas de expresión. Anti-Acne reduce de forma eficaz y duradera el execeso de grasa, puntos negros y espinillas. 
+        </p>
       </ServiceDescription>
     </ServiceItem>
     <ServiceItem>
@@ -177,13 +179,54 @@ export default function Home() {
       </ServiceDescription>
     </ServiceItem>
     <ServiceItem>
+      <ServiceImage src="/dermapen.jpg" alt="Especialistas en Masajes Postoperatorios" />
+      <ServiceDescription>
+        <h3>Dermapen</h3>
+        <p>El tratamiento con Dermapen, también conocido como microneedling, ofrece múltiples beneficios para la piel, como la mejora de la textura, la reducción de arrugas y cicatrices, y la estimulación de la producción de colágeno y elastina, lo que resulta en una piel más firme y joven.</p>
+      </ServiceDescription>
+    </ServiceItem>
+    <ServiceItem>
+      <ServiceImage src="/vacum.jpg" alt="Especialistas en Masajes Postoperatorios" />
+      <ServiceDescription>
+        <h3>Vacumterapia</h3>
+        <p>Tratamiento no invasivo para convatir la celulitis de primer nivel. Se emplea mediante aparatos succionadores que drenan el tejido adiposo movilizando la grasa hacia el sistema linfático.</p>
+      </ServiceDescription>
+    </ServiceItem>
+    <ServiceItem>
+      <ServiceImage src="/vendas.jpg" alt="Especialistas en Masajes Postoperatorios" />
+      <ServiceDescription>
+        <h3>Vendas frías</h3>
+        <p>Tratamiento descongestivo y natural que aprovecha el metabolismo de nuestro cuerpo para lograr la hidratacióm, reafirmación y humectación de la piel. Son una buena opción para tratar la inflamación ya que agilizan la circulación mejorando el flujo sanguíneo.</p>
+      </ServiceDescription>
+    </ServiceItem>
+    <ServiceItem>
+      <ServiceImage src="/electroestimulacion.jpg" alt="Especialistas en Masajes Postoperatorios" />
+      <ServiceDescription>
+        <h3>Electroestimulación</h3>
+        <p>Uso de aparatos que mediante impulsos eléctricos provocan contracciones musculares y como consecuencia, un efecto similar al que se obtendrá ejercitanto los músculos.</p>
+      </ServiceDescription>
+    </ServiceItem>
+    <ServiceItem>
       <ServiceImage src="/masajes-reductores.jpg" alt="Especialistas en Masajes Postoperatorios" />
       <ServiceDescription>
         <h3>Especialistas en Masajes Postoperatorios</h3>
-        <p>Ayudamos en la recuperación postoperatoria con masajes especializados.</p>
+        <p>Beneficios.</p>
+        
+              <li>Eliminación de líquidos acumulados.</li>
+              <li>Prevención y eliminación de fibrosis.</li>
+              <li>Regeneración de la piel.</li>
+              <li>Reducción de ematomas.</li>
+            
       </ServiceDescription>
     </ServiceItem>
-  </SectionContent>
+    <ServiceItem>
+      <ServiceImage src="/drenaje.jpg" alt="Especialistas en Masajes Postoperatorios" />
+      <ServiceDescription>
+        <h3>Drenaje Linfatico</h3>
+        <p>Es un tratamiento destinado a mejorar y facilitar la circulación linfática. Es un masaje suave que se utiliza cuando existe un liquido o sustancias acumuladas en los tejidos.</p>
+      </ServiceDescription>
+    </ServiceItem>
+    </SectionContent>
 </ParallaxLayer>
          {/* Segunda capa de fondo con otra imagen del spa */}
          <div style={{ backgroundImage: "url('/Diseño sin título.png')", backgroundSize: 'cover', zIndex: -99 }}></div>

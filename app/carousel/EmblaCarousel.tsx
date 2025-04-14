@@ -10,7 +10,12 @@ import useEmblaCarousel from 'embla-carousel-react'
 import Image from 'next/image'
 
 type PropType = {
-  slides: number[]
+  slides: {
+    index: number
+    title: string,
+    description: string,
+    image: string
+  }[]
   options?: EmblaOptionsType
 }
 
@@ -32,13 +37,13 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     <section className="embla" dir="rtl">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {slides.map((index) => (
-            <div className="embla__slide" key={index}>
-                <div className="card" key={index}>
-                    <Image src="./celulitis.jpg" alt="Avatar of John Doe" fill={true} />
+          {slides.map((item) => (
+            <div className="embla__slide" key={item.index}>
+                <div className="card" key={item.index}>
+                    <Image src={ item.image } alt="Avatar of John Doe" width={150} height={100} />
                     <div className="container">
-                        <h4><b>John Doe</b></h4>
-                        <p>Architect & Engineer</p>
+                        <h4><b> { item.title } </b></h4>
+                        <p>{ item.description }</p>
                     </div>
                 </div>
             </div>

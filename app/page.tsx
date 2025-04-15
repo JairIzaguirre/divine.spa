@@ -111,7 +111,7 @@ export default function Home() {
     { index: 9, image: './vendas.jpg', title: 'Vendas frías', description: 'Tratamiento descongestivo y natural que aprovecha el metabolismo de nuestro cuerpo para lograr la hidratacióm, reafirmación y humectación de la piel. Son una buena opción para tratar la inflamación ya que agilizan la circulación mejorando el flujo sanguíneo.' }, 
     { index: 10, image: './electroestimulacion.jpg', title: 'Electroestimulación', description: 'Uso de aparatos que mediante impulsos eléctricos provocan contracciones musculares y como consecuencia, un efecto similar al que se obtendrá ejercitanto los músculos.' }, 
     { index: 11, image: './Masajes-reductores.jpg', title: 'Especialistas en Masajes Postoperatorios', description: 'Beneficios: Eliminación de líquidos acumulados, prevención y eliminación de fibrosis, regeneración de la piel y reducción de ematomas.' }, 
-    { index: 12, image: './drenaje.jpg', title: 'Drenaje Linfatico', description: 'Es un tratamiento destinado a mejorar y facilitar la circulación linfática. Es un masaje suave que se utiliza cuando existe un liquido o sustancias acumuladas en los tejidos.' }, 
+    { index: 12, image: './drenaje-01.jpg', title: 'Drenaje Linfatico', description: 'Es un tratamiento destinado a mejorar y facilitar la circulación linfática. Es un masaje suave que se utiliza cuando existe un liquido o sustancias acumuladas en los tejidos.' }, 
   ];
 
 

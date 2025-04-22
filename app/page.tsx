@@ -4,6 +4,7 @@
 
 import styled from 'styled-components';
 import { EmblaOptionsType } from 'embla-carousel';
+import { FaFacebookF, FaMapMarkerAlt } from 'react-icons/fa';  
 import EmblaCarousel from './carousel/EmblaCarousel';
 
 //import { Parallax, ParallaxLayer } from '@react-spring/parallax';
@@ -86,15 +87,81 @@ position: relative;
 		background-color: transparent;
 		transition: height 0.25s ease;
 	}
+`
+const Footer = styled.footer`
+  width: 100%;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 0;
+  margin-top: 3rem;
 `;
+
+const FooterText = styled.p`
+  font-size: 1rem;
+  color: #242424;
+  text-align: center;
+`;
+
+const FooterLink = styled.a`
+  color: #0070f3;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+const SocialWrapper = styled.div`
+  display: flex;
+  gap: 1.2rem;
+`;
+
+const SocialLink = styled.a`
+  font-size: 1.6rem;
+  color: #242424;
+
+  &:hover {
+    color: #0070f3;
+  }
+    
+`
+const FooterImageWrapper = styled.div`
+  width: 200px;          
+  height: 120px;         
+  border-radius: 50%;
+  overflow: hidden;      
+  position: relative;
+
+  /* 1) Sombra difuminada externa  (fallback universal) */
+  box-shadow: 0 0 18px 10px rgba(0, 0, 0, 0.25);
+  /* 2)/
+  mask-image: radial-gradient(ellipse at center,
+                black 70%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse at center,
+                black 70%, transparent 100%);
+`;
+
+const FooterImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   
+  `;
+
 
 
 export default function Home() {
-  // const handleReservaClick = () => {
-  //   window.open('https://wa.me/525568671684', '_blank');
-  // };
+    const handleReservaClick = () => {
+     window.open('https://wa.me/525568671684', '_blank');
+   };
 
-  const OPTIONS: EmblaOptionsType = { direction: 'rtl' }
+  const OPTIONS: EmblaOptionsType = { direction: 'ltr' }
   //const SLIDE_COUNT = 5
   //const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
@@ -118,8 +185,6 @@ export default function Home() {
 
   return (
     <Container>
-
-
       <VideoContainer>
         <Video autoPlay muted loop>
           <source src="3998264-sd_426_226_25fps.mp4" type="video/mp4" />
@@ -129,28 +194,46 @@ export default function Home() {
           <h1>Divine</h1>
           <p>Clinic & Spa</p>
           <br />
-          <p>Nos dedicamos a proporcionar un oasis de relajación y bienestar en el corazón de la Ciudad de México</p>
-          <AnimatedButton>Reserva tu cita</AnimatedButton>
+          <p>
+            Nos dedicamos a proporcionar un oasis de relajación y bienestar en
+            el corazón de la Ciudad de México
+          </p>
+          <AnimatedButton onClick={handleReservaClick}>Reserva tu cita</AnimatedButton>
         </VideoContent>
       </VideoContainer>
 
       <EmblaCarousel slides={SLIDES} options={OPTIONS} />
 
-      
-      
+      <Footer>
 
-      {/* <VideoContainer>
-        <video autoPlay muted loop>
-          <source src="3998264-sd_426_226_25fps.mp4" type="video/mp4" />
-          Tu navegador no soporta el elemento de video.
-        </video>
-        <div className="content">
-          <h1>Contenido sobre el video</h1>
-          <p>Este texto aparece encima del video de fondo.</p>
-        </div>
-      </VideoContainer> */}
+        <FooterImageWrapper>
+          <FooterImage src="/logo.jpeg" alt="Divine Clinic & Spa" />
+       </FooterImageWrapper>
 
+        
+        <FooterText>
+          Encuéntranos a unas calles del parque de los venados&nbsp;
+          <FooterLink
+            href="https://www.google.com.mx/maps/place/Av.+Emperadores+235,+Emperadores,+Benito+Ju%C3%A1rez,+03320+Ciudad+de+M%C3%A9xico,+CDMX/@19.3688141,-99.1627834,15z/data=!4m6!3m5!1s0x85d1ffb755ac772b:0xf13c2afc77a2534e!8m2!3d19.3679114!4d-99.1563484!16s%2Fg%2F11cncf741y?entry=ttu&g_ep=EgoyMDI1MDQyMC4wIKXMDSoASAFQAw%3D%3D"     
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaMapMarkerAlt /> Av. Emperadores 250, CDMX
+          </FooterLink>
+        </FooterText>
 
+        
+        <SocialWrapper>
+          <SocialLink
+            href="https://www.facebook.com/profile.php?id=61574171333834"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <FaFacebookF />
+          </SocialLink>
+        </SocialWrapper>
+      </Footer>
     </Container>
   );
 }
